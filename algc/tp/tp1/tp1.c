@@ -14,11 +14,12 @@ int main()
     printf("insert your number:  ");
     scanf("%d", &n);
     deb = clock();
-    for (i = 2; i < n; i++)
-    {
-        if (n % i == 0)
-            cp++;
-    }
+    if (n % 2 != 0)
+        for (i = 3; i < n; i += 2)
+        {
+            if (n % i == 0)
+                cp++;
+        }
     if (cp == 0)
         printf("the number is prime \n");
     else
